@@ -1,0 +1,83 @@
+.homepage {
+  z-index: 999;
+}
+
+.loader {
+  background: rgba(0, 0, 0, 0.5) url("./Ripple-0.8s-200px.svg") no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+input {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  padding: 1.2em 2em;
+  border-radius: 1px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+  margin-left: 2%;
+}
+
+button:hover {
+  font-weight: bold;
+}
+
+img {
+  margin: 2%;
+  border-radius: 2%;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #000 url(../../stars.png);
+  background-repeat: repeat;
+  z-index: -2;
+}
+
+.twinkling {
+  background: transparent url(../../twinkling.png);
+  z-index: -1;
+  background-repeat: repeat;
+  animation: move-twink-back 200s linear infinite;
+}
